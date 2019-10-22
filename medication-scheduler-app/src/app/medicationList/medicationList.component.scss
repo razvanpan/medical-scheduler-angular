@@ -1,0 +1,20 @@
+.fa-overlay-half{
+    position: relative;
+}
+  
+.fa-overlay-half:after {
+    content: "\f04d";
+    position: absolute;
+    right:-5px;
+    color: white;
+    background-color: white;
+}
+
+.quarter-circle-bottom-right{
+    width: 10px;
+    height: 10px;
+    background: #000000;
+    border-radius: 100px 0 0 0;
+    -moz-border-radius: 100px 0 0 0;
+    -webkit-border-radius: 100px 0 0 0;
+}

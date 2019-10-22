@@ -1,0 +1,22 @@
+<div style=" height: 23.8rem; overflow-y: scroll; width: 100%">
+    <div *ngFor="let pill of pillList; let i = index">
+        <div class="row d-flex align-items-center" style="height: 50px;">
+            <div class="col-2 d-flex align-items-center justify-content-center">
+                <fa-icon *ngIf="pill.portion === portionEnum.FULL" [icon]="faCircle"></fa-icon>
+                <fa-icon *ngIf="pill.portion === portionEnum.HALF" [icon]="faCircle" class="fa-overlay-half"></fa-icon>
+
+                <ng-container *ngIf="pill.portion === portionEnum.QUARTER">
+                    <div class="quarter-circle-bottom-right"></div>
+                </ng-container>
+
+            </div>
+            <div class="col-8 d-flex align-items-center justify-content-start" style="font-size: 20px;">
+                {{pill.name}}
+            </div>
+            <div class="col-2 d-flex align-items-center justify-content-center">
+                <fa-icon [icon]="faChevronRight"></fa-icon>
+            </div>
+        </div>
+        <hr style="margin-top: 2%; margin-bottom: 2%" />
+    </div>
+</div>
